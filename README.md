@@ -1,5 +1,5 @@
 # Desbravando-pandas
-Segue a nossa ementa do curso:
+Segue a nossa ementa:
 
 Principais objetos do Pandas: Series e Dataframes
 
