@@ -1,6 +1,4 @@
 # Desbravando-pandas
-Segue a nossa ementa:
-
 Principais objetos do Pandas: Series e Dataframes
 
 Importando arquivos com pandas: csv, xlsx, parquet
