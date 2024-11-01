@@ -56,7 +56,20 @@ def add_months(row):
 df_fatura["DtFatura"] = df_fatura.apply(add_months, axis=1)
 df_fatura
 
-# %%
+#%%
+# SALAVAR EM PLANILHA
+# Caminho do arquivo Excel onde o DataFrame será salvo
+caminho_arquivo = "../data/fatura_cartao.xlsx"
+
+# Exportar o DataFrame para um arquivo Excel
+df_fatura.to_excel(caminho_arquivo, index=False)
+
+print(f"DataFrame exportado para {caminho_arquivo} com sucesso!")
+
+#%%
+
+
+#%%
 # Agrupar os dados por cliente e data da fatura, somando o valor das parcelas
 df_fatura_mes = (df_fatura.groupby(['idCliente', 'DtFatura'])["ValorParcela"]
                           .sum()
@@ -75,6 +88,7 @@ df_fatura_mes = (df_fatura_mes.pivot_table(columns="DtFatura",
 df_fatura_mes
 
 # %%
+#SALVAR ARQUIVO
 # Exportar o DataFrame final para um arquivo Excel
 df_fatura_mes.to_excel("Fatura_detalhada.xlsx")
 
