@@ -1,6 +1,8 @@
 # %%
 import pandas as pd
 import numpy as np
+# Importar a biblioteca necessária para exportar para Excel
+from openpyxl import Workbook
 
 # Carregar o DataFrame a partir de um arquivo Excel
 df = pd.read_excel("../data/transacao_cartao.xlsx")
