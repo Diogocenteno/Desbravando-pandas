@@ -52,7 +52,10 @@ def import_etl(path: str):
     df = df.rename(columns={"valor": name}).set_index(expected_columns)
 
     return df
+    
 
+#SALVAR ARQUIVO
+#%%
 # Definindo o caminho dos arquivos e listando os arquivos no diretório
 path = "../data/ipea/"
 files = os.listdir(path)
